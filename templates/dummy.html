@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Dummy</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <style>
+      body
+       {
+    margin:0;
+    padding:0;
+    background-color: black;
+    border:2px solid white; 
+       }
+       #nav
+       {
+    text-align: center;
+     margin: 10px;
+     
+       }
+       a{
+    padding: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 45px;
+}
+a:hover{
+    background: linear-gradient(45deg,lightcoral,orange);
+    border-radius: 50px;
+}
+    </style>
+
+</head>
+<body>
+  <div id="nav">
+    
+     <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'registration' %}">Registration</a>
+    <a href="{% url 'login' %}">Login</a>
+    
+</div>
+      <script src="{% static 'js/jquery.js' %}"></script>
+      <script src="{% static 'js/popper.js' %}"></script>
+      <script src="{% static 'js/bootstrap.js' %}"></script>
+      <script src="{% static 'js/mdb.js' %}"></script>
+
+{% block body_block %}
+{% endblock %}
+</body>
+</html>
